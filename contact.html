@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'poppins', sans-serif;
+}
+
+:root {
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --main-color: #0ef;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    color: var(--text-color);
+}
+section {
+    /* background-color:var(--bg-color); */
+    background-color: black;
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+.heading {
+    font-size: 4.5rem;
+    text-align: center;
+}
+.span {
+    color: var(--main-color);
+}
+.contact h2 {
+    margin-bottom: 3rem;
+}
+
+.contact form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--second-bg-color); 
+    border-radius: .8rem;
+    margin: .7rem 0;
+    margin-right: .7rem;
+
+}
+.contact form .input-box input {
+    width: 49%;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number]{
+    -moz-appearance: textfield;
+}
+
+form textarea {
+    resize: none;
+}
+
+.contact form .btn {
+    margin-top: 2rem;
+    cursor: pointer;
+}
+.btn{
+    display: inline-block;
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    padding: 1rem 2.8rem;
+    border-radius: 4rem;
+    margin:  2rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.3rem;
+    font-weight: 600;
+    transition: .5s ease;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+.btn:hover {
+    box-shadow: none;
+}
+
+</style>
+</head>
+<body>
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span class="span">Us!</span></h2>
+        <form action="#">
+            <div class="input-box">
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email address">
+            </div>
+            <div class="input-box">
+                <input type="number" placeholder="mobile number">
+                <input type="text" placeholder="subject">
+            </div>
+            <textarea cols="30" rows="10" placeholder="message discription"></textarea>
+            <input type="submit" value="send message" class="btn">
+
+        </form>
+    </section> 
+</body>
+</html>

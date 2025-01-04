@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>header</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      #profileSection button {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        height: 4rem;
+        width: 4rem;
+        border: 0.2px solid var(--main-color);
+        border-radius: 50%;
+        font-size: 2rem;
+        background: transparent;
+        color: var(--main-color);
+        margin: 3rem 1.5rem 3rem 0;
+        transition: 0.5s ease;
+      }
+      #profileSection button:hover {
+        background-color: var(--main-color);
+        box-shadow: 0 0 1rem var(--main-color);
+      }
+      #profileSection button:hover i {
+        color: var(--second-bg-color);
+      }
+      #profileSection button i {
+        color: var(--main-color);
+        font-size: 3rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="nav">
+        <div class="left-nav">
+          <!-- <img src="logo3.png" alt="logo"> -->
+        </div>
+        <div class="right-nav">
+          <div class="right-nav-up">
+            <div class="r">
+              <input placeholder="Search Art" id="searchInput" class="Search" />
+              <div class="Search-icon"><i class="bx bx-search"></i></div>
+            </div>
+
+            <div class="l" id="loginSection">
+              <a href="Signup.html" class="btn" id="signupBtn">Sign up</a>
+              <a href="login.html" class="btn" id="loginBtn">Login</a>
+            </div>
+            <div class="l" id="profileSection">
+              <button id="profileBtn"><i class="bx bx-cool"></i></button>
+               <!-- <button id="logoutBtn">Logout</button> -->
+            </div>
+          </div>
+          <div id="searchDropdown" class="dropdown-content"></div>
+          <div class="right-nav-down">
+            <ul>
+              <li><a href="index.html">home</a></li>
+              <li class="dropdown">
+                <a href="#art" class="dropbtn">art</a>
+                <div class="dropdown-content">
+                  <a href="mandana.html">mandana</a>
+                  <hr class="hr" />
+                  <a href="warli.html">warli</a>
+                  <hr class="hr" />
+                  <a href="Bamboo.html">art of Bamboo Basketry</a>
+                </div>
+              </li>
+              <li><a href="#artists">artists</a></li>
+              <li><a href="#community">community</a></li>
+              <li><a href="contact.html">contact us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <script>
+      function showProfileMenu() {
+        document.getElementById("loginSection").style.display = "none";
+        document.getElementById("profileSection").style.display = "block";
+      }
+
+      function logout() {
+        document.getElementById("loginSection").style.display = "block";
+        document.getElementById("profileSection").style.display = "none";
+      }
+
+      function simulateLogin() {
+        setTimeout(() => {
+          showProfileMenu();
+        }, 1000);
+      }
+
+      document
+        .getElementById("loginBtn")
+        .addEventListener("click", simulateLogin);
+    </script>
+  </body>
+</html>

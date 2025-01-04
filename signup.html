@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign up</title>
+    <style media="screen">
+      *,
+      *:before,
+      *:after {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      :root {
+        --bg-color: #1f242d;
+        --second-bg-color: #323946;
+        --text-color: #fff;
+        --main-color: #0ef;
+      }
+      body {
+        background-color: #080710;
+      }
+      .background {
+        width: 430px;
+        height: 520px;
+        position: fixed;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+      }
+      .background .shape {
+        height: 200px;
+        width: 200px;
+        position: absolute;
+        border-radius: 50%;
+      }
+      .shape:first-child {
+        background: linear-gradient(#1845ad, #23a2f6);
+        left: -80px;
+        top: -80px;
+      }
+      .shape:last-child {
+        background: linear-gradient(to right, #ff512f, #f09819);
+        right: -60px;
+        bottom: -80px;
+      }
+      form {
+        height: max-content;
+        width: 400px;
+        background-color: rgba(255, 255, 255, 0.13);
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+        padding: 10px 35px;
+        margin: 15rem 0;
+      }
+      form * {
+        font-family: "Poppins", sans-serif;
+        color: #ffffff;
+        letter-spacing: 0.5px;
+        outline: none;
+        border: none;
+      }
+      form h3 {
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 42px;
+        text-align: center;
+      }
+
+      label {
+        display: block;
+        margin-top: 30px;
+        font-size: 16px;
+        font-weight: 500;
+      }
+      input,
+      select,
+      textarea {
+        display: block;
+        height: 50px;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.07);
+        border-radius: 3px;
+        padding: 0 10px;
+        margin-top: 8px;
+        font-size: 14px;
+        font-weight: 300;
+      }
+      textarea {
+        resize: none;
+        height: 7rem;
+      }
+      .opt {
+        color: #080710;
+      }
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      /* input[type="number"] {
+        -moz-appearance: textfield;
+      } */
+      ::placeholder {
+        color: #e5e5e5;
+      }
+      .btn {
+        display: inline-block;
+        background: var(--main-color);
+        color: var(--second-bg-color);
+        padding: 1rem 2.8rem;
+        border-radius: 4rem;
+        margin: 2rem;
+        box-shadow: 0 0 1rem var(--main-color);
+        font-size: 0.8rem;
+        font-weight: 600;
+        transition: 0.5s ease;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      .btn:hover {
+        box-shadow: none;
+      }
+
+      .social {
+        margin-top: 30px;
+        display: flex;
+      }
+      .social div {
+        width: 300px;
+        border-radius: 3px;
+        padding: 5px 10px 10px 5px;
+        color: #eaf0fb;
+        text-align: center;
+      }
+      .social div a {
+        margin-left: 5px;
+      }
+      .social div a:hover {
+        color: rgb(106, 106, 220);
+      }
+      .social i {
+        margin-right: 4px;
+      }
+      .heading {
+        font-size: 1.5rem;
+        text-align: center;
+      }
+      .span {
+        color: var(--main-color);
+      }
+      .btn-container {
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="background">
+      <div class="shape"></div>
+      <div class="shape"></div>
+    </div>
+    <form method="post" id="signup-form">
+      <h2 class="heading">Register <span class="span">Here</span></h2>
+
+      <label for="Name">First name</label>
+      <input type="text" id="first-name" required />
+
+      <label for="Name">Last name</label>
+      <input type="text" id="last-name" required />
+
+      <label for="gender">Gender</label>
+      <select required>
+        <option class="opt">Gender</option>
+        <option value="Male" class="opt">Male</option>
+        <option value="Female" class="opt">Female</option>
+        <option value="Other" class="opt">Other</option>
+      </select>
+
+      <label for="phone">Phone no.</label>
+      <input type="number" id="number" size="10" required />
+
+      <label for="Address">Address</label>
+      <textarea
+        placeholder="Current Address"
+        value="address"
+        id="address"
+        required
+      ></textarea>
+
+      <label for="Email">Email Address</label>
+      <input type="email" placeholder="Email Id" id="email" required />
+
+      <label for="password">Password</label>
+      <input
+        type="password"
+        placeholder="Enter Password"
+        id="password"
+        required
+      />
+
+      <div class="btn-container">
+        <button type="submit" class="btn">Sign Up</button>
+      </div>
+
+      <div class="social">
+        <div class="go">
+          Already have an account?<a href="login.html">Login</a>
+        </div>
+      </div>
+    </form>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const signupForm = document.getElementById("signup-form");
+
+        signupForm.addEventListener("submit", async (e) => {
+          e.preventDefault();
+
+          const formData = new FormData(signupForm);
+
+          const requestBody = {
+            first_name: document.getElementById("first-name").value,
+            last_name: document.getElementById("last-name").value,
+            gender: document.getElementsByTagName("select")[0].value,
+            phone: document.getElementById("number").value,
+            address: document.getElementById("address").value,
+            email: document.getElementById("email").value,
+            password: document.getElementById("password").value,
+          };
+          console.log(requestBody);
+          try {
+            const response = fetch("http://localhost:5500/signup", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(requestBody),
+            }).then(res => res.json()).then(res => alert(res.message)).catch(error => alert("Registration failed"));
+          } catch (error) {
+            console.error("Error during signup:", error);
+            alert("An error occurred during registration");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

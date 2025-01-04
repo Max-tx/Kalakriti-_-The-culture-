@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> 
+<style>
+.single-art{
+    height: max-content;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2rem 10rem;
+}
+.single-art-image{
+            width: 23%;
+            min-width: 15rem;
+            padding: 1rem 1.2rem;
+            border: .1rem solid #cce7d0;
+            border-radius: 2.5rem;
+            cursor: pointer;
+            box-shadow: 2rem 2rem 3rem rgba(0, 0, 0, 0.02);
+            margin: 1.5rem 0;
+            transition: 0.2s ease;
+}
+.single-art-image:hover{
+    box-shadow: 2rem 2rem 3rem rgba(0, 0, 0, 0.07);
+}
+.single-art-des{
+    height: 40rem;
+    /* background-color: red; */
+    width: 40%;
+}
+.title{
+    font-size: 2.5rem;
+    color: black;
+    text-transform: capitalize;
+    margin-bottom: 1.5rem;
+}
+.price{
+    font-size: 1.5rem;
+    color: rgb(236, 96, 96);
+    margin-bottom: 1.5rem;
+
+}
+.hlight{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgb(104, 97, 97);
+    margin-bottom: 1rem;
+}
+.sp{
+    font-size: 1.3rem;
+    color: rgb(66, 64, 64);
+    margin:0 2rem .5rem 2rem;
+}
+.sp span{
+    margin-right: 5rem;
+}
+.des{
+    width: 80%;
+    font-size: 1.2rem;
+    color: rgb(66, 64, 64);
+}
+.more h3 {
+    margin-top: 4rem;
+    font-size: 5rem; 
+    color: black;
+    text-align: center;
+}
+.more h5{
+    font-size: 1.8rem;
+    color: black;
+    text-align: center;
+}
+</style>
+</head>
+<body>
+    <header>
+        <div id="header-placeholder"></div>
+    </header>
+    <div class="hero">
+        <h3>Indian Art Culture</h3><bR>
+        <h5>Buying art is like adding a piece of a beautiful world to your own.</h5>
+    </div>
+    <main>
+        <div class="single-art">
+            <div class="single-art-image">
+                <img src="image/mandana/art3.jpg" alt="art image">
+            </div>
+            <div class="single-art-des">
+                <h3 class="title">wall art</h3>
+                <h4 class="price">$50</h4>
+                <div class="hlight">Spacifications:</div>
+               <pre><div class="sp"><span>Size:</span>             12 X 12 in | 30.5 X 30.5 cm</div></pre> 
+                <pre><div class="sp"><span>Artist:</span>           M L sign</div></pre>
+                <div class="sp"><span>Availability:</span>yes</div>
+                <div class="hlight">Art Description:</div>
+                <div class="des">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui at assumenda velit omnis atque excepturi laborum, perspiciatis repellendus dolor corrupti vitae suscipit hic ipsum fugit dicta. Beatae quis deserunt error.</div>
+            <a href="checkout.html" class="btn">buy now</a>
+            </div>
+        </div>
+        <div class="more">
+            <h3>Featured Arts</h3><br>
+            <h5>Investing in art is investing in the beauty that colors life</h5>
+        </div>
+        <div id="feature-placeholder"></div>
+    </main>
+    <footer>
+        <div id="footer-placeholder"></div>
+    </footer>
+    <script>
+        // Load the header using JavaScript
+        const headerPlaceholder = document.getElementById("header-placeholder");
+        const headerRequest = new XMLHttpRequest();
+        headerRequest.open("GET", "header.html", true);
+        headerRequest.onreadystatechange = function () {
+            if (headerRequest.readyState === 4 && headerRequest.status === 200) {
+                headerPlaceholder.innerHTML = headerRequest.responseText;
+            }
+        };
+        headerRequest.send();
+
+        // load the footer using js
+        const footerPlaceholder = document.getElementById("footer-placeholder");
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(footerContent => {
+                footerPlaceholder.innerHTML = footerContent;
+            });
+
+        // load the feature section
+        const featurePlaceholder = document.getElementById("feature-placeholder");
+        fetch("feature.html")
+            .then(response => response.text())
+            .then(featureContent => {
+                featurePlaceholder.innerHTML = featureContent;
+            });
+    </script>
+</body>
+</html>

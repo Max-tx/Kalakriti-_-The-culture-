@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalakriti</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div id="header-placeholder"></div>
+    </header>
+    <main>
+        <div class="bg-slider">
+            <div class="slider">
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <div class="slide">
+                            <img src="image/slider/slide1.jpg" alt="Slide 1">
+                        </div>
+                        <div class="slide">
+                            <img src="image/slider/slide2.jpg" alt="Slide 2">
+                        </div>
+                        <div class="slide">
+                            <img src="image/slider/slide3.png" alt="Slide 3">
+                        </div>
+                    </div>
+                    <button class="prev-btn">&#10094</button>
+                    <button class="next-btn">&#10095</button>
+                </div>
+            </div>
+            <div class="h-slider">
+                <div class="h-text">
+                    <a href="#"><i class='bx bx-wallet'></i>Secure Payment</a>
+                    <a href="#"><i class='bx bx-car'></i>Cash On Delivery available</a>
+                    <a href="#"><i class='bx bxs-lock-alt'></i>Secure personal infomation</a>
+                    <a href="#"><i class='bx bx-support'></i>F24/7 Support</a>
+                    <a href="#"><i class='bx bx-money-withdraw'></i>Save Money</a>
+
+                </div>
+            </div>
+        </div>
+        <div class="bg-landing">
+            <section class="sec" id="home">
+                <div class="left-sec">
+                    <img src="image/art/home.jpeg" alt="image">
+                </div>
+                <div class="right-sec">
+                    <h2 class="heading">Kala -<span class="span">kriti</span></h2>
+                    <h3>Art:Culture's Heartbeat</h3>
+                    <p>Kalakriti is a traditional form of art in which Indian artists share their stories, emotions, and
+                        ideas with the rest of the world. Their work, however, is limited to rural households. As a
+                        result,
+                        we can employ them.As a result, they can find work and have their work recognised globally. as
+                        well
+                        as providing creative, cultural arts to art lovers or art enthusiasts.</p>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+            </section>
+            <hr>
+            <section class="mandana sec" id="mandana">
+                <div class="right-sec mandana">
+                    <h2 class="heading">Mandana <span class="span">Art</span></h2>
+                    <h3>Rajasthan</h3>
+                    <p>Mandana art is a traditional folk painting style from Rajasthan, India, known for its symmetrical
+                        geometric patterns inspired by nature. Created with natural materials, it carries spiritual
+                        significance and is often used for festivals and rituals. Mostly practiced by rural women, it's
+                        now
+                        evolving and gaining wider recognition.</p>
+                    <a href="mandana.html" class="btn">Buy now</a>
+                </div>
+                <div class="left-sec">
+                    <img src="image/art/Mandana.webp" alt="image">
+                </div>
+            </section>
+            <hr>
+            <section class="warli sec" id="warli">
+                <div class="left-sec">
+                    <img src="image/art/warli.jpg" alt="image">
+                </div>
+                <div class="right-sec">
+                    <h2 class="heading">Warli <span class="span">Art</span></h2>
+                    <h3>Maharashtra</h3>
+                    <p>Warli art is a traditional tribal art form originating from the Warli tribe in Maharashtra,
+                        India.
+                        It's characterized by its simple, symbolic, and geometric style. Created with basic shapes like
+                        circles and triangles, it depicts scenes from daily tribal life, nature, and rituals. Originally
+                        painted on walls, it has gained global recognition on various mediums. Warli art embodies the
+                        cultural heritage and community values of the Warli people.</p>
+                    <a href="warli.html" class="btn">Buy now</a>
+                </div>
+            </section>
+            <hr>
+            <section class="Bamboo sec" id="art of Bamboo Basketry">
+                <div class="right-sec Bamboo">
+                    <h2 class="heading">Art of <span class="span">Bamboo Basketry</span></h2>
+                    <h3>Madhya pradesh </h3>
+                    <p>Bamboo basketry is a craft of weaving baskets and objects using bamboo, valued for its
+                        flexibility
+                        and strength. It blends functionality with artistic expression through techniques like coiling
+                        and
+                        twining. This ancient tradition showcases cultural heritage and sustainable creativity.</p>
+                    <a href="Bamboo.html" class="btn">Buy now</a>
+                </div>
+                <div class="left-sec">
+                    <img src="image/art/Bamboo.jpg" alt="image">
+                </div>
+            </section>
+            <hr>
+
+        </div>
+    </main>
+    <footer>
+        <div id="footer-placeholder"></div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Load the header using JavaScript
+        const headerPlaceholder = document.getElementById("header-placeholder");
+        const headerRequest = new XMLHttpRequest();
+        headerRequest.open("GET", "header.html", true);
+        headerRequest.onreadystatechange = function () {
+            if (headerRequest.readyState === 4 && headerRequest.status === 200) {
+                headerPlaceholder.innerHTML = headerRequest.responseText;
+            }
+        };
+        headerRequest.send();
+
+        // load the footer using js
+        const footerPlaceholder = document.getElementById("footer-placeholder");
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(footerContent => {
+                footerPlaceholder.innerHTML = footerContent;
+            });
+    </script>
+</body>
+
+</html>
+
+
+
+
+

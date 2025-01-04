@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mandana Arts</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+*{
+    color: black;
+    margin: 0;
+}
+
+/* .art-container{
+    background-image: url(image/bg-landing.jpg);
+    height: max-content;
+    width: 100vw;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+} */
+.art-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top:2rem;
+    flex-wrap: wrap;
+    padding: 0 15rem;
+}
+.art{
+    /* background-color: white; */
+    width: 23%;
+    min-width: 15rem;
+    padding: 1rem 1.2rem;
+    border: .1rem solid #cce7d0;
+    border-radius: 2.5rem;
+    cursor: pointer;
+    box-shadow: 2rem 2rem 3rem rgba(0, 0, 0, 0.02);
+    margin: 1.5rem 0;
+    transition: 0.2s ease;
+    position: relative;
+}
+.art:hover{
+    box-shadow: 2rem 2rem 3rem rgba(0, 0, 0, 0.06);
+}
+.art img{
+    width: 100%;
+    border-radius: 2rem;
+}
+.art .des{
+    text-align: start;
+    padding: 1rem 0;
+}
+.art .des span{
+    color: #606063;
+    font-size: 1.2rem;
+
+}
+.art .des h5{
+    padding-top: .7rem;
+    color: #1a1a1a;
+    font-size: 1.4rem;
+}
+.art .des i{
+    font-size: 1.2rem;
+    color: rgb(243, 181, 25);
+}
+.art .des h4{
+    padding-top: .7rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #088178;
+}
+.art .btn{
+    border-radius: 5rem;
+    position: absolute;
+    bottom: 0.4rem;
+    right: 2rem;
+}
+.art .btn i{
+    font-size: 2rem;
+}
+.hero{
+    height: 35rem;
+    width: 100%;
+    background-color: red;
+    position: relative;
+    background-image: url(image/bg-slider.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hero h3{
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    font-size: 5rem;
+}
+.hero h5{
+    position: absolute;
+    top: 60%;
+    left: 34%;
+    font-size: 1.5rem;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div id="header-placeholder"></div>
+    </header>
+    <div class="hero">
+        <h3>Indian Art Culture</h3><bR>
+        <h5>Buying art is like adding a piece of a beautiful world to your own.</h5>
+    </div>
+    <div>
+        <!-- 1 art -->
+        <div class="art-container">
+            <div class="art" onclick="window.location.href='Sart.html';">
+                <img src="image/mandana/art3.jpg" alt="art1">
+                <div class="des">
+                    <span>mandana</span> 
+                    <h5>art made by love</h5>
+                    <div class="rat">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                        <i class='bx bx-star' ></i>
+                    </div>
+                    <h4>$55</h4>
+                </div>
+                <button class="btn"><i class='bx bx-cart-alt cart'></i></button>
+            </div>
+        <!-- 2 art -->
+            <div class="art">
+                <img src="image/mandana/art2.jpg" alt="art1">
+                <div class="des">
+                    <span>mandana</span> 
+                    <h5>art made by love</h5>
+                    <div class="rat">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                        <i class='bx bx-star' ></i>
+                    </div>
+                    <h4>$55</h4>
+                </div>
+                <button class="btn"><i class='bx bx-cart-alt cart'></i></button>
+            </div>
+            <!-- 3art -->
+            <div class="art">
+                <img src="image/mandana/art3.jpg" alt="art1">
+                <div class="des">
+                    <span>mandana</span> 
+                    <h5>art made by love</h5>
+                    <div class="rat">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                        <i class='bx bx-star' ></i>
+                    </div>
+                    <h4>$55</h4>
+                </div>
+                <button class="btn"><i class='bx bx-cart-alt cart'></i></button>
+            </div>
+            <!-- 4art -->
+            <div class="art">
+                <img src="image/mandana/art4.jpg" alt="art1">
+                <div class="des">
+                    <span>mandana</span> 
+                    <h5>art made by love</h5>
+                    <div class="rat">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                        <i class='bx bx-star' ></i>
+                    </div>
+                    <h4>$55</h4>
+                </div>
+                <button class="btn"><i class='bx bx-cart-alt cart'></i></button>
+            </div>
+            <!-- 5art -->
+            <div class="art">
+                <img src="image/mandana/art3.jpg" alt="art1">
+                <div class="des">
+                    <span>mandana</span> 
+                    <h5>art made by love</h5>
+                    <div class="rat">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                        <i class='bx bx-star' ></i>
+                    </div>
+                    <h4>$55</h4>
+                </div>
+                <button class="btn"><i class='bx bx-cart-alt cart'></i></button>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // Load the header using JavaScript
+        const headerPlaceholder = document.getElementById("header-placeholder");
+        const headerRequest = new XMLHttpRequest();
+        headerRequest.open("GET", "header.html", true);
+        headerRequest.onreadystatechange = function () {
+            if (headerRequest.readyState === 4 && headerRequest.status === 200) {
+                headerPlaceholder.innerHTML = headerRequest.responseText;
+            }
+        };
+        headerRequest.send();
+// load the footer
+        const footerPlaceholder = document.getElementById("footer-placeholder");
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(footerContent => {
+                footerPlaceholder.innerHTML = footerContent;
+            });
+     </script> 
+
+    </footer>
+</body>
+</html>
